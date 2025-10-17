@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	if (!board) return; // Safety guard
 
-	// Exercise 1: Layout the board (add class 'square' to each cell)
+	// Exercise 1: Layout the board 
 	const squares = Array.from(board.children);
 	squares.forEach((sq) => sq.classList.add('square'));
 
@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			return;
 		}
 
-		// Optional: Detect draw (not explicitly required but useful UX)
+		// Check for draw
 		if (state.every(Boolean)) {
 			statusDiv.textContent = "It's a draw!";
 			statusDiv.classList.remove('you-won');
